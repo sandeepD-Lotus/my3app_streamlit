@@ -137,6 +137,8 @@ Mappings:
       PrefixListCloudFront: 'pl-3b927c52'
     'us-west-2':
       PrefixListCloudFront: 'pl-82a045eb'
+    'eu-north-1':
+      PrefixListCloudFront: 'pl-92a045eb'
 
 Resources:
 
