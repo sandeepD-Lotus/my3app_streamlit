@@ -23,9 +23,16 @@ def fetch_s3_file(s3_url):
     except Exception:
         return None
 
+# def query_dynamodb(block_id):
+#     table = dynamodb.Table(DYNAMODB_TABLE)
+#     response = table.scan(FilterExpression=boto3.dynamodb.conditions.Attr('block_id').eq(block_id))
+#     return response.get("Items", [])
+
 def query_dynamodb(block_id):
     table = dynamodb.Table(DYNAMODB_TABLE)
-    response = table.scan(FilterExpression=boto3.dynamodb.conditions.Attr('block_id').eq(block_id))
+    response = table.query(
+        KeyConditionExpression=boto3.dynamodb.conditions.Key('block_id').eq(block_id)
+    )
     return response.get("Items", [])
 
 
