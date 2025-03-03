@@ -7,7 +7,7 @@ from streamlit_image_zoom import image_zoom
 
 
 # AWS Configuration
-BUCKET_NAME = "inference-1"
+BUCKET_NAME = "inference-3"
 DYNAMODB_TABLE = "data_logs"
 
 # Initialize AWS Clients
