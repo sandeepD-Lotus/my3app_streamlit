@@ -252,7 +252,16 @@ Resources:
                   - "bedrock:InvokeModelWithResponseStream"
                 Resource:
                   - "*"
-
+      Policies:
+        - PolicyName: StreamlitDynamoDBAccess
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action:
+                  - dynamodb:Query
+                  - dynamodb:GetItem
+                Resource: arn:aws:dynamodb:us-east-1:222634371685:table/data_logs
   StreamlitLogGroup:
     DeletionPolicy: Retain
     UpdateReplacePolicy: Retain
