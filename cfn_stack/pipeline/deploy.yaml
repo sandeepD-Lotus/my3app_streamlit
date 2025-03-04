@@ -267,7 +267,7 @@ Resources:
                 Action:
                   - s3:GetObject
                   - s3:ListBucket
-                Resource: arn:aws:s3:::inference-3
+                Resource: 'arn:aws:s3:::inference-3/*'
   StreamlitLogGroup:
     DeletionPolicy: Retain
     UpdateReplacePolicy: Retain
