@@ -268,8 +268,8 @@ Resources:
                   - s3:GetObject
                   - s3:ListBucket
                 Resource:
-                  - !Sub arn:aws:s3:us-east-1:inference-3'
-                  - !Sub arn:aws:s3:us-east-1:inference-3/*
+                  - arn:aws:s3:us-east-1:inference-3'
+                  - arn:aws:s3:us-east-1:inference-3/*
   StreamlitLogGroup:
     DeletionPolicy: Retain
     UpdateReplacePolicy: Retain
