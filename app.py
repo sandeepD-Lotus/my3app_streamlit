@@ -144,7 +144,10 @@ if block_number:
             #st.markdown('<div class="section">', unsafe_allow_html=True)
             st.markdown("### Defect Report", unsafe_allow_html=True)
             #st.markdown('<div class="section">', unsafe_allow_html=True)
-#             if csv_data:
+            if csv_data:
+                st.table(pd.read_csv(BytesIO(csv_data)))
+            else:
+                st.info("No defect report found.")
 
 
 # import streamlit as st
